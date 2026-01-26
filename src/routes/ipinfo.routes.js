@@ -1,9 +1,9 @@
+// routes/ipinfo.routes.js
 import { Router } from "express";
-import authMiddleware from "../middleware/auth.middleware.js";
 import { getIpInfo } from "../controllers/ipinfo.controller.js";
 
 const router = Router();
 
-router.get("/ipinfo", authMiddleware, getIpInfo);
+router.get("/ipinfo", getIpInfo);
 
 export default router;
